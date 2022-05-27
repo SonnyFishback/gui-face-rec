@@ -31,10 +31,10 @@ class View(tk.Tk):
         self.img_container = ttk.Label(self.image_placeholer_frame, image=self.current_displayed_image)
         self.img_container.place(x=0, y=0)
         '''upload image button'''
-        self.upload_image_button = ttk.Button(self.left_frame, text="Upload Image", command=self.controller.handle_upload_button_click)
+        self.upload_image_button = ttk.Button(self.left_frame, text="Upload Image", command=self.controller._handle_upload_button_click)
         self.upload_image_button.grid( column=0, row=1)
         '''capture image button'''
-        self.capture_image_button = ttk.Button(self.left_frame, text="Capture Image", command=self.controller.handle_image_capture)
+        self.capture_image_button = ttk.Button(self.left_frame, text="Capture Image", command=self.controller._handle_image_capture)
         self.capture_image_button.grid( column=0, row=2)
         '''---------------------- RIGHT FRAME ----------------------'''
         self.right_frame = ttk.Frame(self)
@@ -55,7 +55,7 @@ class View(tk.Tk):
         self.last_name_entry = ttk.Entry(self.right_frame)
         self.last_name_entry.grid(row = 1,column = 1)
         '''submit button'''
-        self.submit_form_btn = ttk.Button(self.right_frame, command= self.controller.submit_user_data)
+        self.submit_form_btn = ttk.Button(self.right_frame, command= self.controller._submit_user_data)
         self.submit_form_btn.configure(text='Save')
         self.submit_form_btn.grid(row=2, column=0)
 

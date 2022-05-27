@@ -55,6 +55,9 @@ class Controller():
         self.view.first_name_entry.delete(0, END)
         self.view.last_name_entry.delete(0, END)
 
+    # def _launch_controller(self):
+    #     self.view.main()
+
 if __name__ == '__main__':
     app = Controller()
-    app._launch_controller()
+    app._main()
