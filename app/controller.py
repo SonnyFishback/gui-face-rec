@@ -39,12 +39,12 @@ class Controller():
                 self.kill_camera()
 
                 # self.captured_image = ImageTk.PhotoImage(self.captured_frame)
-                # Convert captured frame to numpy array to be processed by face_recognition libray.
+                # # Convert captured frame to numpy array to be processed by face_recognition libray.
                 # self.frame_as_nump_arr = img_to_numpy_arr(frame)
-                # Pull faces from captured frame.
+                # # Pull faces from captured frame.
                 # self.captured_faces = self.pull_faces_from_image(self.frame_as_nump_arr)
                 # print(self.captured_faces)
-                return frame
+                # return frame
 # Might want to move this to the model.
     def return_file_location(self):
         file_path = fd.askopenfilename()
@@ -54,6 +54,9 @@ class Controller():
         # still needs to be saved and stored in the model.
         self.view.first_name_entry.delete(0, END)
         self.view.last_name_entry.delete(0, END)
+    
+    def set_image_to_new(self, new_image):
+        self.view.img_container.config(image=new_image)
 
     # def _launch_controller(self):
     #     self.view.main()

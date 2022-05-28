@@ -4,9 +4,7 @@ from numpy import asarray
 
 
 class Model():
-    
     def __init__(self) -> None:
-
         '''
             self.image display = 'image'
         '''
@@ -26,8 +24,6 @@ class Model():
             pil_image = Image.fromarray(face_image)
         return pil_image
 
-    def set_image_to_new(self, new_image):
-        self.view.img_container.config(image=new_image)
 
 
 
